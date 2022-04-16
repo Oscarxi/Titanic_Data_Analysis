@@ -1,10 +1,9 @@
-from cProfile import label
 import pandas as pd
 import matplotlib.pyplot as plt
 
 # 資料讀取
-train_data = pd.read_csv('Titanic Survivor/train.csv')
-test_data = pd.read_csv('Titanic Survivor/test.csv')
+train_data = pd.read_csv('Titanic Data Visualization/Titanic Data/test.csv')
+test_data = pd.read_csv('Titanic Data Visualization/Titanic Data/test.csv')
 
 # 合併資料
 all_data = pd.concat([train_data,test_data], axis=0)
