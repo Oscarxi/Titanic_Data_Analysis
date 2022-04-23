@@ -2,11 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 資料讀取
-train_data = pd.read_csv('Titanic Data/train.csv')
-test_data = pd.read_csv('Titanic Data/test.csv')
+train_data = pd.read_csv('train.csv')
+test_data = pd.read_csv('test.csv')
 
 # 合併資料
-all_data = pd.concat([train_data,test_data], axis=0)
+all_data = pd.concat([train_data,test_data], axis = 0)
 
 
 # 製作生存比例圓餅圖
@@ -23,9 +23,9 @@ data = [female_survived_cnt, female_not_survived_cnt, male_survived_cnt, male_no
 # 設定圖表
 fig1, ax1 = plt.subplots()
 ax1.pie(data, labels = labels, autopct = '%.1f%%', startangle = 90, textprops = {'fontsize': 20})
-ax1.set_title("Survived Proportion", size = 20)  # 標題
-ax1.legend()  # 圖例
-fig1.set_size_inches(12, 8)  # 圖表大小
+ax1.set_title("Survival Proportion", size = 30)
+ax1.legend(loc = "lower right")
+fig1.set_size_inches(15, 10)
 
 # 輸出圖表
 plt.show()
